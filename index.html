@@ -3,35 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountain Background Page</title>
+    <title>Animal Tabs</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            color: white;
-            background-image: url('https://images.stockcake.com/public/6/0/c/60cb9e9f-e126-4902-9e9f-fcb81eb27657/mountain-floral-beauty-stockcake.jpg'); /* Replace with your mountain image URL */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .tabs {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            cursor: pointer;
+            margin: 20px 0;
         }
-        h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            background-color: #f1f1f1;
         }
-        p {
-            font-size: 1.5em;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        .tab.active {
+            background-color: #fff;
+            border-bottom: none;
+            font-weight: bold;
+        }
+        .content {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none;
+            height: 350px;
+            background-size: cover;
+            color: white;
+        }
+        .content.active {
+            display: block;
+        }
+        #fish {
+            background-image: url('https://images.stockcake.com/public/b/8/e/b8ebc396-32f8-4b2d-bb3b-f68c72851947_large/colorful-puzzle-pieces-stockcake.jpg'); /* Replace with a fish image URL */
+        }
+        #dog {
+            background-image: url('https://images.stockcake.com/public/b/3/d/b3d12705-4e8b-4912-9af1-ae26f9a22424_large/futuristic-spacecraft-design-stockcake.jpg'); /* Replace with a dog image URL */
+        }
+        #cat {
+            background-image: url('https://images.stockcake.com/public/d/9/c/d9c812de-5a91-48c4-a0f6-09633f2d8a23_large/futuristic-tunnel-vision-stockcake.jpg'); /* Replace with a cat image URL */
+        }
+        .description {
+            font-size: 16px;
+            margin-top: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .links a {
+            color: #ffcc00; /* Change link color */
+            text-decoration: none;
+            margin-right: 15px;
+            display: block; /* Ensures links appear on separate lines */
+        }
+        .links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Welcome to the Mountains</h1>
-        <p>Experience the beauty of nature.</p>
+
+    <h1>Animal Information</h1>
+    <div class="tabs">
+        <div class="tab active" onclick="showContent('fish')">Fish</div>
+        <div class="tab" onclick="showContent('dog')">Dog</div>
+        <div class="tab" onclick="showContent('cat')">Cat</div>
     </div>
+
+    <div id="fish" class="content active">
+        <h2>Fish</h2>
+        <p>Fish are aquatic animals that have gills and fins. They come in various shapes, sizes, and colors.</p>
+        <div class="description">Fish can be found in oceans, rivers, and lakes around the world. They are an important part of many ecosystems.</div>
+        <div class="links">
+            <a href="https://www.fishkeepingworld.com" target="_blank" title="Learn about fish keeping techniques">Fish Keeping</a>
+            <a href="https://www.fishbase.se" target="_blank" title="Explore a comprehensive fish database">Fish Database</a>
+            <a href="https://www.aquariumcoop.com" target="_blank" title="Shop for aquarium supplies">Aquarium Supplies</a>
+            <a href="https://www.fishfacts.com" target="_blank" title="Discover interesting facts about fish">Fish Facts</a>
+            <a href="https://www.fishworld.com" target="_blank" title="Learn about different fish species">Fish Species</a>
+            <a href="https://www.aquaticplantcentral.com" target="_blank" title="Explore aquatic plants for aquariums">Aquatic Plants</a>
+        </div>
+    </div>
+
+    <div id="dog" class="content">
+        <h2>Dog</h2>
+        <p>Dogs are domesticated mammals, often referred to as man's best friend. They are known for their loyalty and companionship.</p>
+        <div class="description">Dogs come in many breeds, each with its own unique characteristics and traits. They are known for their intelligence and trainability.</div>
+        <div class="links">
+            <a href="https://www.akc.org" target="_blank" title="The American Kennel Club for dog breeds">American Kennel Club</a>
+            <a href="https://www.petmd.com/dog" target="_blank" title="Dog health information and advice">PetMD Dog Care</a>
+            <a href="https://www.chewy.com/cat" target="_blank" title="Shop for dog supplies">Chewy Dog Supplies</a>
+            <a href="https://www.dogbreedslist.com" target="_blank" title="Comprehensive list of dog breeds">Dog Breeds List</a>
+            <a href="https://www.dogtrainingnation.com" target="_blank" title="Tips for dog training">Dog Training Tips</a>
+            <a href="https://www.doglovers.com" target="_blank" title="A community for dog lovers">Dog Lovers Community</a>
+        </div>
+    </div>
+
+    <div id="cat" class="content">
+        <h2>Cat</h2>
+        <p>Cats are small, carnivorous mammals that are often kept as pets. They are known for their independence and playful behavior.</p>
+        <div class="description">Cats are skilled hunters and are often admired for their agility and grace. They can be very affectionate companions.</div>
+        <div class="links">
+            <a href="https://www.catfancy.com" target="_blank" title="Everything about cats">Cat Fancy</a>
+            <a href="https://www.cattime.com" target="_blank" title="Cat information and resources">Cat Time</a>
+            <a href="https://www.chewy.com/cat" target="_blank" title="Shop for cat supplies">Chewy Cat Supplies</a>
+            <a href="https://www.catbehaviorassociates.com" target="_blank" title="Advice on cat behavior">Cat Behavior Tips</a>
+            <a href="https://www.cathealth.com" target="_blank" title="Cat health resources">Cat Health Resources</a>
+            <a href="https://www.thecatnip.com" target="_blank" title="Shop for cat toys and accessories">Cat Toys and Accessories</a>
+        </div>
+    </div>
+
+    <script>
+        function showContent(animal) {
+            // Hide all content
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected content
+            document.getElementById(animal).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
